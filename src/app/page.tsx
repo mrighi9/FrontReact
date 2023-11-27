@@ -5,9 +5,9 @@ import React from 'react';
 
 const Page: React.FC = () => {
   const estiloDoTitulo = {
-    fontFamily: 'sans flex', // Substitua 'Bakersville' pela fonte desejada
-    fontSize: '36px', // Tamanho da fonte, ajuste conforme necessário
-    fontWeight: 'bold', // Peso da fonte, ajuste conforme necessário
+    fontFamily: 'sans flex',
+    fontSize: '36px', 
+    fontWeight: 'bold', 
    
     color: 'white', // Cor do texto
     display: 'grid',

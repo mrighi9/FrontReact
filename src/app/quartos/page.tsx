@@ -63,6 +63,7 @@ export default function Quartos() {
             console.error("Erro ao atualizar quarto:", error);
             }
            }
+        
 
     
 
@@ -108,7 +109,7 @@ export default function Quartos() {
                             quartoExcluido={quartoExcluido}></Tabela>
                     </>
                 ) : ( <Formulario quarto={quarto}
-                    quartoMudou={salvarQuarto}
+                    quartoMudou={salvarOuAlterarQuarto}
                     cancelado={() => setVisivel('tabela')} /> 
                     )}
             </Layout>

@@ -47,7 +47,22 @@ export default function Quartos() {
         console.error("Erro ao excluir quarto:", error);
         }}}
         
+        function salvarOuAlterarQuarto(quarto: Quarto) {
+            if (quarto.id) {
+            alterarQuarto(quarto)
+            } else {
+            salvarQuarto(quarto)
+            }
+           }
 
+           async function alterarQuarto(quarto: Quarto) {
+            try {
+            const quartoAtualizado = await atualizarQuarto(quarto);
+            setVisivel("tabela");
+            } catch (error) {
+            console.error("Erro ao atualizar quarto:", error);
+            }
+           }
 
     
 
@@ -60,23 +75,10 @@ export default function Quartos() {
          }
         }
 
-        function salvarOuAlterarQuarto(quarto: Quarto) {
-            if (quarto.id) {
-            alterarQuarto(quarto)
-            } else {
-            salvarQuarto(quarto)
-            }
-           }
+        
         
 
-        async function alterarQuarto(quarto: Quarto) {
-            try {
-            const quartoAtualizado = await atualizarQuarto(quarto);
-            setVisivel("tabela");
-            } catch (error) {
-            console.error("Erro ao atualizar quarto:", error);
-            }
-           }
+      
 
 
     function novoQuarto() {
